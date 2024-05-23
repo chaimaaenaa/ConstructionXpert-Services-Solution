@@ -59,7 +59,7 @@
             color: #fff;
         }
         .update-button {
-            background-color: #007bff;
+            background-color: #F8BE0C;
         }
         .delete-button {
             background-color: #dc3545;

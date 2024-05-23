@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.hero-section {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.services-section .service-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.history-section {
+    background: #f9f9f9;
+}
+
+.history-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-section {
+    background: #333;
+    color: #fff;
+}
+
+.footer-section p {
+    margin: 0;
+}
