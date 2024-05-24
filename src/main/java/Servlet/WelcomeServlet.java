@@ -1,34 +1,21 @@
 package Servlet;
 
-import DAO.ProjectDao;
-import DaoImp.ProjectDaoImp;
-import Model.Project;
-
-import javax.servlet.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
 
+@WebServlet(name = "WelcomeServlet", urlPatterns = {"/"})
 public class WelcomeServlet extends HttpServlet {
-
-    private   ProjectDao projectDao;
-
-    public WelcomeServlet() {
-        super();
-        projectDao = new ProjectDaoImp();
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/Home.jsp").forward(request, response);
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-
-            List<Project> listProjects = projectDao.selectAllProjects();
-            request.setAttribute("listProjects", listProjects);
-            request.getRequestDispatcher("/WEB-INF/home/home.jsp").forward(request, response);
-        } catch (SQLException e) {
-            throw new ServletException("Error retrieving projects", e);
-        }
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Handle POST requests if necessary
     }
 }

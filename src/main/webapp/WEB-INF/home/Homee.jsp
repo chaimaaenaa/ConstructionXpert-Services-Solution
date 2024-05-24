@@ -1,25 +1,28 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConstructionXpert</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <style> <%@include file="../CSS/style.css"%></style>
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 <header>
     <div class="logo">
-        <img src="../../img/logo.png" alt="CMHOUSE Logo">
+        <img src="/WEB-INF/img/logo.png" alt="CMHOUSE Logo">
         <h1>CMHOUSE</h1>
 
     </div>
     <nav>
         <ul>
-            <li><a href="home.html">Home</a></li>
+            <li><a href="${pageContext.request.contectPath}/">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="project.html">Projects</a></li>
-            <li><a href="task.html">Task</a></li>
-            <li><a href="resource.html">Resources</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Task</a></li>
+            <li><a href="">Resources</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
