@@ -1,40 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-.navbar {
-    margin-bottom: 0;
+header {
+    background: #555;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.hero-section {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+header .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .logo h1 {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
     color: #fff;
-    padding: 100px 0;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: #ffae00;
+}
+
+.services, .history, .team {
+    padding: 50px 20px;
     text-align: center;
 }
 
-.services-section .service-box {
-    background: #fff;
-    border: 1px solid #ddd;
+.services h2, .history h2, .team h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.service-cards, .team-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-cards .card, .team-cards .card {
+    background: #f4f4f4;
+    border-radius: 10px;
     padding: 20px;
-    margin: 10px 0;
+    margin: 10px;
+    flex: 1;
+    max-width: 45%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.history-section {
-    background: #f9f9f9;
+.service-cards .card h3, .team-cards .card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.history-section img {
-    max-width: 100%;
-    height: auto;
+.history p {
+    max-width: 800px;
+    margin: 20px auto;
 }
 
-.footer-section {
-    background: #333;
+.history button {
+    background: #ffd700;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.history button:hover {
+    background: #ffae00;
+}
+
+footer {
+    background: #555;
     color: #fff;
+    padding: 20px 0;
 }
 
-.footer-section p {
-    margin: 0;
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+footer .logo {
+    display: flex;
+    align-items: center;
+}
+
+footer .logo img {
+    width: 50px;
+}
+
+footer .logo h1 {
+    margin-left: 10px;
+    font-size: 24px;
+}
+
+footer .footer-info {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+footer .footer-info div {
+    margin: 0 20px;
+}
+
+footer .footer-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer .social a {
+    margin: 0 10px;
+}
+
+footer .social img {
+    width: 24px;
 }

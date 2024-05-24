@@ -5,125 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConstructionXpert</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="C:\ConstructionXpert-Services-Solution\img\logo.png" alt="Logo" style="width: 40px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/WEB-INF/Projects/listProjects.jsp">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/WEB-INF/Tasks/listTasks.jsp">Taches</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/WEB-INF/Resources/listResources.jsp">Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<header>
+    <div class="logo">
+        <img src="../../img/logo.png" alt="CMHOUSE Logo">
+        <h1>CMHOUSE</h1>
 
-<!-- Hero Section -->
-<header class="hero-section">
-    <div class="container text-center">
-        <h1>ConstructionXpert</h1>
-        <p>SEE HOW A 10-STORIES TOWER'S BEING BUILT IN TIME-LAPSE!</p>
-        <a href="#" class="btn btn-warning">See our recent projects</a>
     </div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="task.html">Task</a></li>
+            <li><a href="resource.html">Resources</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 </header>
-
-<!-- Services Section -->
-<section class="services-section py-5">
-    <div class="container text-center">
-        <h2>Our Services</h2>
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="service-box">
-                    <h3>Building Information Modeling</h3>
-                    <p>Automated physical and functional characteristics of a facility...</p>
-                </div>
+<main>
+    <section class="hero">
+        <h2>ConstructionXpert</h2>
+        <p>SEE HOW A 10-STORIES TOWER'S BEING BUILT, IN A TIME-LAPSE!</p>
+        <button>see our recent projects</button>
+    </section>
+    <section class="services">
+        <h2>OUR SERVICES</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>BUILDING INFORMATION MODELING</h3>
+                <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
-            <div class="col-md-3">
-                <div class="service-box">
-                    <h3>Building Information Modeling</h3>
-                    <p>Automated physical and functional characteristics of a facility...</p>
-                </div>
+            <div class="card">
+                <h3>BUILDING INFORMATION MODELING</h3>
+                <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
-            <div class="col-md-3">
-                <div class="service-box">
-                    <h3>Building Information Modeling</h3>
-                    <p>Automated physical and functional characteristics of a facility...</p>
-                </div>
+            <div class="card">
+                <h3>BUILDING INFORMATION MODELING</h3>
+                <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
-            <div class="col-md-3">
-                <div class="service-box">
-                    <h3>Building Information Modeling</h3>
-                    <p>Automated physical and functional characteristics of a facility...</p>
-                </div>
+            <div class="card">
+                <h3>BUILDING INFORMATION MODELING</h3>
+                <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- History Section -->
-<section class="history-section py-5 bg-light">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Our History</h2>
-                <p>Our construction company has been founded 10 years ago...</p>
-                <a href="#" class="btn btn-warning">Read More</a>
+    </section>
+    <section class="history">
+        <h2>OUR HISTORY</h2>
+        <p>OUR CONSTRUCTION COMPANY HAS BEEN FOUNDED 10 YEARS AGO, AT THE VERY PEAK OF THE BUILDING FRENZY IN THE US...</p>
+        <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and correlating that were all involved in completing each separate project, then our productivity is immense!</p>
+        <button>READ MORE</button>
+    </section>
+    <section class="team">
+        <h2>OUR TEAM</h2>
+        <h3>Our Big Community</h3>
+        <div class="team-cards">
+            <div class="card">
+                <img src="team1.jpg" alt="Team Member">
+                <h3>Executive Manager</h3>
+                <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
             </div>
-            <div class="col-md-6">
-                <img src="history-image.jpg" alt="History Image" class="img-fluid">
+            <div class="card">
+                <img src="team2.jpg" alt="Team Member">
+                <h3>Executive Manager</h3>
+                <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
+            </div>
+            <div class="card">
+                <img src="team3.jpg" alt="Team Member">
+                <h3>Executive Manager</h3>
+                <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
+            </div>
+            <div class="card">
+                <img src="team4.jpg" alt="Team Member">
+                <h3>Executive Manager</h3>
+                <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Projects Section -->
-<section class="projects-section py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <img src="project1.jpg" alt="Project 1" class="img-fluid">
+    </section>
+</main>
+<footer>
+    <div class="footer-content">
+        <div class="logo">
+            <img src="img/logo.png" alt="CMHOUSE Logo">
+            <h1>CMHOUSE</h1>
+            <p>CONSTRUCTIONXPERT</p>
+        </div>
+        <div class="footer-info">
+            <div class="about">
+                <h3>About</h3>
+                <p>Executive Manager</p>
+                <p>Executive Manager</p>
+                <p>Executive Manager</p>
             </div>
-            <div class="col-md-4">
-                <img src="project2.jpg" alt="Project 2" class="img-fluid">
-            </div>
-            <div class="col-md-4">
-                <img src="project3.jpg" alt="Project 3" class="img-fluid">
+            <div class="contact">
+                <h3>Contact</h3>
+                <p>Executive Manager</p>
+                <p>Executive Manager</p>
+                <p>Executive Manager</p>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer-section py-4 bg-dark text-light">
-    <div class="container text-center">
-        <p>&copy; 2024 ConstructionXpert. All rights reserved.</p>
+        <div class="social">
+            <a href="#"><img src="img/google-plus.png" alt="Google"></a>
+            <a href="#"><img src="img/email.png" alt="Email"></a>
+            <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+        </div>
     </div>
 </footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
