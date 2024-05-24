@@ -216,14 +216,14 @@
 <body>
 <header>
   <div class="logo">
-    <img src="img/logo.png" alt="CMHOUSE Logo">
+    <img src="/WEB-INF/img/" alt="CMHOUSE Logo">
   </div>
   <nav>
     <ul>
       <li><a href="Home.jsp">Home</a></li>
       <li><a href="#">About</a></li>
       <li><a href="listProjects.jsp">Projects</a></li>
-      <li><a href="/WEB-INF/Tasks/listTasks.jsp">Task</a></li>
+      <li><a href="listTasks.jsp">Task</a></li>
       <li><a href="/WEB-INF/Resources/listResources.jsp">Resources</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
