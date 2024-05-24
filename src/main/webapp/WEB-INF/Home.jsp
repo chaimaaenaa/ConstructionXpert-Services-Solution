@@ -22,7 +22,7 @@
        }
 
        header {
-           background: rgba(9, 30, 55, 0.62);
+           background: rgba(9, 30, 55, 0.62) ;
            color: #fff;
            padding: 10px 0;
            display: flex;
@@ -65,7 +65,7 @@
        }
 
        .hero {
-           background: url('hero.jpg') no-repeat center center/cover;
+           background: url("https://www.quodoc.com/media/get/large/37/bouw.jpg") no-repeat center center/cover;
            color: #fff;
            text-align: center;
            padding: 100px 20px;
