@@ -216,19 +216,20 @@
 <body>
 <header>
   <div class="logo">
-    <img src="/WEB-INF/img/" alt="CMHOUSE Logo">
+    <img src="https://i.ibb.co/kcztT0J/BG.png" alt="CMHOUSE Logo">
+    <h1>CMHOUSE</h1>
+
   </div>
   <nav>
     <ul>
-      <li><a href="Home.jsp">Home</a></li>
+      <li><a href="#">Home</a></li>
       <li><a href="#">About</a></li>
-      <li><a href="listProjects.jsp">Projects</a></li>
-      <li><a href="listTasks.jsp">Task</a></li>
-      <li><a href="/WEB-INF/Resources/listResources.jsp">Resources</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
 </header>
+
+
 <h1>Liste des Projets</h1>
 <button class="add-new-project"><a href="${pageContext.request.contextPath}/AddProjectServlet" class="add-button">+ Ajouter un Nouveau Projet</a></button>
 
@@ -251,7 +252,7 @@
 <footer>
   <div class="footer-content">
     <div class="logo">
-      <img src="img/logo.png" alt="CMHOUSE Logo">
+      <img src="https://i.ibb.co/kcztT0J/BG.png" alt="CMHOUSE Logo">
       <h1>CMHOUSE</h1>
       <p>CONSTRUCTIONXPERT</p>
     </div>
@@ -270,10 +271,11 @@
       </div>
     </div>
     <div class="social">
-      <a href="#"><img src="img/google-plus.png" alt="Google"></a>
-      <a href="#"><img src="img/email.png" alt="Email"></a>
-      <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
-      <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://i.ibb.co/XFLW3fK/google-plus.png" alt="Google"></a>
+      <a href="#"><img src="https://i.ibb.co/DCpNVsV/email.png" alt="Email"></a>
+      <a href="#"><img src="https://i.ibb.co/Sf5yT0f/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="https://i.ibb.co/9qFvXM4/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="https://i.ibb.co/W2PJQ7q/instagram.png" alt="Instagram"></a>
     </div>
   </div>
 </footer>

@@ -22,7 +22,7 @@
        }
 
        header {
-           background: rgba(9, 30, 55, 0.62) ;
+           background: #555;
            color: #fff;
            padding: 10px 0;
            display: flex;
@@ -91,6 +91,44 @@
 
        .hero button:hover {
            background: #ffae00;
+       }
+       #tm-bg {
+           position: fixed;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+           z-index: -1;
+           animation: bgChange 9s infinite;
+       }
+       @keyframes bgChange {
+           0% {
+              background-color: white;
+           }
+           25% {
+              background-color: #CCCCCC;
+           }
+           25.01% {
+               background-image: url(https://assets-global.website-files.com/622ae04fd9…c394474/6312d7f55a579cea146e55f0_cps-services.jpg);
+           }
+           50% {
+               background-color: #F8BE0C;
+           }
+           50.01% {
+            background-color: #F8BE0C;
+           }
+           75% {
+              background-color: #5D6B7C;
+           }
+           75.01% {
+               background-image: url(https://assets-global.website-files.com/622ae04fd98a7521ec394474/6312d7f55a579cea146e55f0_cps-services.jpg);
+           }
+           100% {
+               background-color: white;
+           }
        }
 
        .services, .history, .team {
@@ -200,6 +238,60 @@
        .history button:hover {
            background: #ffae00;
        }
+       .team {
+           padding: 50px 20px;
+           text-align: center;
+       }
+
+       .team h2 {
+           font-size: 36px;
+           margin-bottom: 10px;
+       }
+
+       .team h3 {
+           font-size: 28px;
+           margin-bottom: 40px;
+           font-style: italic;
+       }
+
+       .team-cards {
+           display: flex;
+           justify-content: space-around;
+           flex-wrap: wrap;
+       }
+
+       .team-cards .card {
+           background: #f4f4f4;
+           border-radius: 10px;
+           padding: 20px;
+           margin: 10px;
+           flex: 1;
+           max-width: 30%;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           text-align: left;
+           transition: transform 0.3s ease;
+       }
+
+       .team-cards .card:hover {
+           transform: scale(1.05);
+       }
+
+       .team-cards .card img {
+           width: 100%;
+           height: auto;
+           border-radius: 10px;
+           margin-bottom: 15px;
+       }
+
+       .team-cards .card h3 {
+           font-size: 24px;
+           margin-bottom: 10px;
+       }
+
+       .team-cards .card p {
+           font-size: 16px;
+           color: #555;
+       }
        footer {
            background: #555;
            color: #fff;
@@ -285,11 +377,9 @@
     </div>
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="${pageContext.request.contextPath}/Projects/listProjects">Projects</a></li>
-            <li><a href="${pageContext.request.contextPath}/ListTasksServlet">Task</a></li>
-            <li><a href="${pageContext.request.contextPath}/ListResourcesServlet">Resources</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>
@@ -298,6 +388,7 @@
     <section class="hero">
         <h2>ConstructionXpert</h2>
         <p>SEE HOW A 10-STORIES TOWER'S BEING BUILT, IN A TIME-LAPSE!</p>
+        <div id="tm-bg"></div>
         <button>see our recent projects</button>
     </section>
     <section class="services">
@@ -305,28 +396,28 @@
         <div class="service-cards">
             <div class="card">
                 <div class="icon">
-                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
+                    <div  class="bg"><img src="https://i.ibb.co/D4Z2hWc/image-1.png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
             <div class="card">
                 <div class="icon">
-                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
+                    <div  class="bg"><img src="https://i.ibb.co/4NffDBk/image-2-Copie.png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
             <div class="card">
                 <div class="icon">
-                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
+                    <div  class="bg"><img src="https://i.ibb.co/rwGhvMC/image-3-Copie.png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
             <div class="card">
                 <div class="icon">
-                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
+                    <div  class="bg"><img src="https://i.ibb.co/37y1Ht0/image-4-Copie.png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
@@ -352,17 +443,17 @@
         <h3>Our Big Community</h3>
         <div class="team-cards">
             <div class="card">
-                <img src="img/femmes-batiment-850.jpg" alt="Team Member"  class="con">
+                <img src="https://i.ibb.co/TWXq0HN/femmes-construction-femmes.jpg" alt="Team Member" class="con">
                 <h3>Executive Manager</h3>
                 <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
             </div>
             <div class="card">
-                <img src="img/home.jpg" alt="Team Member" class="con">
+                <img src="https://i.ibb.co/WVhNBy8/istockphoto-1346124841-612x612.jpg" alt="Team Member" class="con">
                 <h3>Executive Manager</h3>
                 <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
             </div>
             <div class="card">
-                <img src="img/femmes-construction_femmes.jpg" alt="Team Member" class="con">
+                <img src="https://i.ibb.co/BLYPt4p/femmes-batiment-850.jpg" alt="Team Member" class="con">
                 <h3>Executive Manager</h3>
                 <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and</p>
             </div>
