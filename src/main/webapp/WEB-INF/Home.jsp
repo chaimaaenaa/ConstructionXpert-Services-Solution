@@ -254,7 +254,7 @@
            height: 100px;
            border-radius: 100px;
        }
-       .conour{
+       .con{
            width: 50px;
            height: 50px;
            margin-top: 20px;
@@ -305,28 +305,28 @@
         <div class="service-cards">
             <div class="card">
                 <div class="icon">
-                    <img src="path/to/your/icon1.png" alt="Icon 1">
+                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
             <div class="card">
                 <div class="icon">
-                    <img src="path/to/your/icon2.png" alt="Icon 2">
+                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
             <div class="card">
                 <div class="icon">
-                    <img src="path/to/your/icon3.png" alt="Icon 3">
+                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
             </div>
             <div class="card">
                 <div class="icon">
-                    <img src="path/to/your/icon4.png" alt="Icon 4">
+                    <div  class="bg"><img src="img/image (4).png" alt=""  class="con"></div>
                 </div>
                 <h3>BUILDING INFORMATION MODELING</h3>
                 <p>Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...</p>
