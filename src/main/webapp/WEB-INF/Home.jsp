@@ -64,20 +64,40 @@
            color: #ffd700;
        }
 
+
        .hero {
+           position: relative;
            background: url("https://www.quodoc.com/media/get/large/37/bouw.jpg") no-repeat center center/cover;
-           color: #fff;
+           color: #F8BE0C;
            text-align: center;
            padding: 100px 20px;
+           overflow: hidden;
        }
 
-       .hero h2 {
-           font-size: 48px;
+       .hero::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0, 0, 0, 0.5); /* Adjust the opacity value as needed */
+           z-index: 1;
+       }
+
+       .hero-content {
+           position: relative;
+           z-index: 2;
+       }
+
+       .hero h1 {
+           font-size: 50px;
            margin-bottom: 10px;
        }
 
        .hero p {
            font-size: 24px;
+           color: white;
            margin-bottom: 20px;
        }
 
@@ -112,7 +132,7 @@
               background-color: #CCCCCC;
            }
            25.01% {
-               background-image: url(https://assets-global.website-files.com/622ae04fd9…c394474/6312d7f55a579cea146e55f0_cps-services.jpg);
+               background-image: url(https://www.apardion.co.uk/wp-content/uploads/2023/12/Apardion-Construction.webp);
            }
            50% {
                background-color: #F8BE0C;
@@ -385,12 +405,18 @@
     </nav>
 </header>
 <main>
+
     <section class="hero">
-        <h2>ConstructionXpert</h2>
-        <p>SEE HOW A 10-STORIES TOWER'S BEING BUILT, IN A TIME-LAPSE!</p>
-        <div id="tm-bg"></div>
-        <button>see our recent projects</button>
+        <div class="hero-content">
+            <br><br><br><br>
+            <h1>Welcome to CMHOUSE</h1><br>
+            <p>Your project management tool see our recent projects see our recent projects </p><br>
+            <br><br><br>
+
+            <button>see our recent projects</button>
+        </div>
     </section>
+    <div id="tm-bg"></div>
     <section class="services">
         <h2>OUR SERVICES</h2>
         <div class="service-cards">
