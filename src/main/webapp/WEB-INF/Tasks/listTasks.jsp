@@ -118,45 +118,81 @@
             background-color: #ddd;
             color: black;
         }
+        main {
+            padding: 20px;
+        }
+
+        .task-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .task-list h1 {
+            color: #f4c542;
+            font-size: 2em;
+        }
+
+        .add-new-task {
+            background-color: #f4c542;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
         .task-cards {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
             justify-content: center;
-            padding: 20px;
+            gap: 20px;
         }
+
         .task-card {
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            background-color: #444c5c;
+            color: white;
             padding: 20px;
+            border-radius: 10px;
             width: 300px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            border: 3px solid #f4c542;
         }
+
         .task-card h2 {
+            color: #f4c542;
             margin-top: 0;
         }
+
         .task-card p {
             margin: 5px 0;
         }
+
         .button-container {
             display: flex;
             justify-content: space-between;
         }
-        .button-container a {
-            padding: 10px 15px;
+
+        .button-container button {
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
             border-radius: 5px;
-            text-decoration: none;
-            color: #fff;
+            margin-right: 10px;
         }
-        .update-button {
-            background-color: #F8BE0C;
-        }
-        .delete-button {
-            background-color: #dc3545;
-        }
+
         .resources-button {
             background-color: #28a745;
+        }
+
+        .update-button {
+            background-color: #4285f4;
+        }
+
+        .delete-button {
+            background-color: #dc3545;
         }
     </style>
 </head>
@@ -181,25 +217,29 @@
     <a href="${pageContext.request.contextPath}/AddTaskServlet?projectId=${projectId}">Add Task</a>
 </div>
 
-<h2>Liste des Tâches</h2>
-
-<div class="task-cards">
-    <c:forEach var="task" items="${tasks}">
-        <div class="task-card">
-            <h2>${task.tDescription}</h2>
-            <p><strong>Description:</strong> ${task.tDescription}</p>
-            <p><strong>Date de Début:</strong> ${task.tStartdate}</p>
-            <p><strong>Date de Fin:</strong> ${task.tEndDate}</p>
-            <p><strong>Statut:</strong> ${task.statut}</p>
-            <p><strong>Ressources:</strong> ${task.resources}</p>
-            <div class="button-container">
-                <a href="${pageContext.request.contextPath}/UpdateTaskServlet?taskId=${task.tId}&projectId=${projectId}" class="update-button">Update</a>
-                <a href="${pageContext.request.contextPath}/DeleteTaskServlet?taskId=${task.tId}&projectId=${projectId}" class="delete-button">Delete</a>
-                <a href="${pageContext.request.contextPath}/ListResourcesServlet?taskId=${task.tId}" class="resources-button">See All Resources</a>
-            </div>
+<main>
+    <section class="task-list">
+        <h1>Liste des Tâches</h1>
+        <button class="add-new-task" onclick="location.href='${pageContext.request.contextPath}/AddTaskServlet?projectId=${projectId}'">+ Ajouter une nouvelle Tache</button>
+        <div class="task-cards">
+            <c:forEach var="task" items="${tasks}">
+                <div class="task-card">
+                    <h2>Suivi des projets</h2>
+                    <p><strong>Description:</strong> ${task.tDescription}</p>
+                    <p><strong>Date de début:</strong> ${task.tStartdate}</p>
+                    <p><strong>Date de Fin:</strong> ${task.tEndDate}</p>
+                    <p><strong>Statut:</strong> ${task.statut}</p>
+                    <p><strong>Ressources:</strong> ${task.resources}</p>
+                    <div class="button-container">
+                        <button class="resources-button" onclick="location.href='${pageContext.request.contextPath}/ListResourcesServlet?taskId=${task.tId}'">See All Resources</button>
+                        <button class="update-button" onclick="location.href='${pageContext.request.contextPath}/UpdateTaskServlet?taskId=${task.tId}&projectId=${projectId}'">Update</button>
+                        <button class="delete-button" onclick="location.href='${pageContext.request.contextPath}/DeleteTaskServlet?taskId=${task.tId}&projectId=${projectId}'">Delete</button>
+                    </div>
+                </div>
+            </c:forEach>
         </div>
-    </c:forEach>
-</div>
+    </section>
+</main>
 <footer>
     <div class="footer-content">
         <div class="logo">
@@ -230,6 +270,17 @@
         </div>
     </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const deleteButtons = document.querySelectorAll('.delete-button');
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const taskCard = button.closest('.task-card');
+                taskCard.remove();
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

@@ -151,6 +151,44 @@
     .delete-button {
       background-color: #dc3545;
     }
+    main {
+      padding: 20px;
+    }
+
+    .resources {
+      text-align: center;
+    }
+
+    .add-resource-btn {
+      background-color: #FFC107;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
+
+    .resource-card {
+      background-color: #FFB300;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 600px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      color: white;
+      font-size: 16px;
+    }
+
+    .resource-card h2 {
+      margin-bottom: 10px;
+    }
+
+    .resource-card p {
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>
@@ -175,22 +213,25 @@
   <a href="${pageContext.request.contextPath}/AddResourceServlet?taskId=${taskId}">Add Resource</a>
 </div>
 
-<h1>Liste des Ressources</h1>
-<div class="resource-cards">
-  <c:forEach var="resource" items="${resources}">
+<main>
+  <section class="resources">
+    <h1>Liste des Ressources</h1>
+    <button class="add-resource-btn"> <a href="${pageContext.request.contextPath}/AddResourceServlet?taskId=${taskId}">+ Ajouter un Nouveau Ressources</a></button>
+<c:forEach var="resource" items="${resources}">
     <div class="resource-card">
-      <h2>${resource.rName}</h2>
-      <p><strong>Type:</strong> ${resource.rType}</p>
+     <h2>${resource.rName}</h2>
+      <p><strong>Type:</strong> ${resource.rType}/p>
       <p><strong>Quantité:</strong> ${resource.quantity}</p>
       <p><strong>Fournisseur:</strong> ${resource.provider}</p>
-      <p><strong>ID Tâche:</strong> ${resource.tId}</p>
-      <div class="button-container">
-        <a href="${pageContext.request.contextPath}/UpdateResourceServlet?resourceId=${resource.rId}&taskId=${taskId}" class="update-button">Update</a>
-        <a href="${pageContext.request.contextPath}/DeleteResourceServlet?resourceId=${resource.rId}&taskId=${taskId}" class="delete-button">Delete</a>
-      </div>
+      <p><strong>ID Tache:</strong> ${resource.tId}</p>
+  <div class="button-container">
+  <a href="${pageContext.request.contextPath}/UpdateResourceServlet?resourceId=${resource.rId}&taskId=${taskId}" class="update-button">Update</a>
+  <a href="${pageContext.request.contextPath}/DeleteResourceServlet?resourceId=${resource.rId}&taskId=${taskId}" class="delete-button">Delete</a>
+  </div>
     </div>
-  </c:forEach>
-</div>
+</c:forEach>
+  </section>
+</main>
 <footer>
   <div class="footer-content">
     <div class="logo">
@@ -221,5 +262,28 @@
     </div>
   </div>
 </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const addResourceBtn = document.querySelector('.add-resource-btn');
+    addResourceBtn.addEventListener('click', function() {
+      alert('Ajouter un nouveau ressource functionality will be implemented.');
+    });
+
+    const updateBtns = document.querySelectorAll('.update-btn');
+    updateBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        alert('Update resource functionality will be implemented.');
+      });
+    });
+
+    const deleteBtns = document.querySelectorAll('.delete-btn');
+    deleteBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        alert('Delete resource functionality will be implemented.');
+      });
+    });
+  });
+
+</script>
 </body>
 </html>
