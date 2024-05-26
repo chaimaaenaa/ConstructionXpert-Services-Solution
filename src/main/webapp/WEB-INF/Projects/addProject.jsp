@@ -32,13 +32,13 @@
         input[type="submit"] {
             padding: 0.7em;
             color: #fff;
-            background-color: #007BFF;
+            background-color: #F8BE0C;
             border: none;
             border-radius: .3em;
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #F8BE0C;
         }
     </style>
 </head>

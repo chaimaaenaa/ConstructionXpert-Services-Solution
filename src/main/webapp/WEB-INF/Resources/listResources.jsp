@@ -146,7 +146,7 @@
       color: #fff;
     }
     .update-button {
-      background-color: #007bff;
+      background-color: #555;
     }
     .delete-button {
       background-color: #dc3545;
@@ -171,6 +171,7 @@
 
     .resource-card {
       background-color: #FFB300;
+      border: 8px solid;
       border-radius: 10px;
       padding: 20px;
       margin: 20px auto;
@@ -178,7 +179,7 @@
       max-width: 600px;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
       text-align: left;
-      color: white;
+      color: #555;
       font-size: 16px;
     }
 

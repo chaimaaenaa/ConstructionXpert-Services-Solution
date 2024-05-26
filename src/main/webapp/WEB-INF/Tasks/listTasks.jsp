@@ -188,7 +188,7 @@
         }
 
         .update-button {
-            background-color: #4285f4;
+            background-color:#F8BE0C;
         }
 
         .delete-button {

@@ -175,8 +175,8 @@
 
     .project-card {
       background-color: #5D6B7C;
-      border: 1px solid #F8BE0C;
-      border-radius: 5px;
+      border: 5px solid #F8BE0C;
+      border-radius: 10px;
       padding: 20px;
       width: calc(50% - 40px); /* Two cards per row */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

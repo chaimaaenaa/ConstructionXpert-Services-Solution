@@ -35,7 +35,7 @@
         }
         .form-group button {
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #F8BE0C;
             border: none;
             border-radius: 5px;
             color: #fff;
