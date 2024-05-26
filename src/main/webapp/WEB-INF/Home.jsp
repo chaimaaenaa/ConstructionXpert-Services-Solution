@@ -192,7 +192,7 @@
            width: 60px;
            height: 60px;
            border-radius: 50%;
-           background: #f4f4f4;
+           
            padding: 10px;
            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
        }
@@ -381,6 +381,7 @@
 
 
        }
+
        .our{
            margin-left: 900px;
        }
