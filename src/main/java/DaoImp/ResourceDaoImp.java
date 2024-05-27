@@ -82,13 +82,13 @@ public class ResourceDaoImp implements ResourceDao {
     public Resource selectResourceById(int rId) throws SQLException {
         Resource resource = null;
         try (Connection connection = Db_Connection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(SELECT_RESOURCE_BY_ID_SQL)) {
+             PreparedStatement statement = connection.prepareStatement("SELECT * FROM resource WHERE r_id = ?")) {
             statement.setInt(1, rId);
             try (ResultSet rs = statement.executeQuery()) {
                 if (rs.next()) {
                     String rName = rs.getString("r_name");
                     String rType = rs.getString("r_type");
-                    int quantity = rs.getInt("quantity");
+                    int quantity = rs.getInt("r_quantity");
                     String provider = rs.getString("provider");
                     int tId = rs.getInt("t_id");
                     resource = new Resource(rId, rName, rType, quantity, provider, tId);
@@ -97,4 +97,5 @@ public class ResourceDaoImp implements ResourceDao {
         }
         return resource;
     }
+
 }

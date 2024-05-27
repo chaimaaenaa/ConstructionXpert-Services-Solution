@@ -8,12 +8,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const deleteButtons = document.querySelectorAll('.delete');
-    deleteButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const projectCard = button.closest('.project-card');
-            projectCard.remove();
-        });
-    });
-});

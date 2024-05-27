@@ -178,4 +178,59 @@ footer .social a {
 footer .social img {
     width: 24px;
 }
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    header nav ul {
+        flex-direction: column;
+    }
+
+    .service-cards, .team-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-info {
+        flex-direction: column;
+    }
+
+    footer .social {
+        margin-top: 10px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 10px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .service-cards, .team-cards {
+        gap: 10px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 10px;
+    }
+
+    footer .footer-info div {
+        padding: 10px 0;
+    }
+}

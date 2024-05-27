@@ -200,6 +200,7 @@
        .history {
            padding: 50px 20px;
            background-color: #f9f9f9;
+           background: #F8BE0C;
        }
 
        .history-content {

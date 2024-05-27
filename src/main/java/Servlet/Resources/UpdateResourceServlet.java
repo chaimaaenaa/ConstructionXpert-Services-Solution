@@ -1,6 +1,7 @@
 package Servlet.Resources;
 
 import DaoImp.ResourceDaoImp;
+import Model.Project;
 import Model.Resource;
 
 import javax.servlet.ServletException;
@@ -25,8 +26,8 @@ public class UpdateResourceServlet extends HttpServlet {
         int taskId = Integer.parseInt(request.getParameter("taskId"));
         int resourceId = Integer.parseInt(request.getParameter("resourceId"));
         try {
-            Resource resource = resourceDao.selectResourceById(resourceId);
-            request.setAttribute("resource", resource);
+            Resource existingResource = resourceDao.selectResourceById(resourceId);
+            request.setAttribute("resource", existingResource);
             request.setAttribute("resourceId", resourceId);
             request.setAttribute("taskId", taskId);
             request.getRequestDispatcher("/WEB-INF/Resources/updateResource.jsp").forward(request, response);
